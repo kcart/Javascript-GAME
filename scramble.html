@@ -26,23 +26,23 @@
             var scrambledWord = SCRAMBLED[listIndex]
 
             // prompt the user to guess the original word when given the scrambled word
-            var userPrompt = prompt("Can you guess the orginal word from this scrambled word? " + scrambledWord);
+            var userPrompt = prompt("Can you guess the orginal word from this scrambled word? " + scrambledWord).toLowerCase().trim();
 
 
             // If the user guesses wrong, tell them they were wrong and the right word.
             
             if (userPrompt !== word) {
 
-                alert(" Sorry the correct word is, " + word);
+                alert(" Sorry the correct original word is: " + word);
             }
             
             // If the user guesses the correct word, congratulate them.
             if (userPrompt === word) {
                 alert("Good guess. You're correct!");
-                playing = confirm("Press OK To keep playing or Cancel to quit");
-            }
+                
+            }  
 
-            
+            playing = confirm("Press OK To keep playing or Cancel to quit");     
 
             // What does confirm() return?
             // What does setting the playing variable do?
